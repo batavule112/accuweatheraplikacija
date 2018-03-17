@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.omotac {
+	position: relative;
+	padding: 0 15px;
+	background-image: url("https://media.giphy.com/media/SAemZChRCE7pm/giphy.gif");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #092e6b;
+	max-width: 768px;
+}
+
+.gornji {
+	position: relative;
+	top: 7px;
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	width: 100%;
+	padding: 0;
+}
+
+.gornji h3 {
+	text-align: center;
+	line-height: 30px;
+}
+
+.gornji-glavni {
+	height: 300px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border-bottom: 1px solid #fff;
+}
+
+.gornji-glavni h6 {
+	margin-top: 5px;
+}
+
+.gornji-glavni h1 {
+	margin-top: 75px;
+	font-size: 80px;
+	margin-bottom: 25px;
+}
+
+.gornji-dno {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.dno {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gornji-dno p {
+	font-size: 60%;
+}
+
+.sredina {
+	border-bottom: 1px solid #fff;
+}
+
+.swiper-container {
+    height: 130px;
+    border-bottom: 1px solid #fff;
+}
+
+.mala-kutija {
+	margin: 0 auto;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+}
+
+.mala-kutija img {
+	height: 40px;
+	width: 55px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.mala-kutija p {
+	font-size: 90%;
+}
+
+.donje {
+	width: 100%;
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+}
+
+.donji-dani {
+	border-bottom: 1px solid #fff;
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.donji-dani:first-child {
+	display: none;
+}
+
+.between {
+	width: calc(50% + 30px);
+	display: flex;
+	justify-content: space-between;
+}
+
+.between img {
+	height: 50px;
+	width: 60px;
+	margin: 2px 0 1px 0;
+}
+
+.center-vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media screen and (max-width: 320px) {
+
+}
