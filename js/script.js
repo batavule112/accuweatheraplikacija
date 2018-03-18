@@ -19,7 +19,7 @@ function nadjiLokaciju() {
 function prikaziPoziciju(pozicija) {
     var lat = parseFloat(pozicija.coords.latitude).toFixed(3)
     var long = parseFloat(pozicija.coords.longitude).toFixed(3)
-    var urlLoc = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=%09CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG&q="+ lat +"%2C%20"+ long +"";
+    var urlLoc = "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=%09CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG&q="+ lat +"%2C%20"+ long +"";
     // pocetak lokacijskog requesta
 	trazi.open('GET', urlLoc, true);
 	trazi.onload = function(){
@@ -27,7 +27,7 @@ function prikaziPoziciju(pozicija) {
 		var data = JSON.parse(this.responseText);
 		console.log(data);
 		document.getElementById('lokacija').insertAdjacentHTML('afterbegin', data.EnglishName);
-		var url5day = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+ data.Key +"?apikey=CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG";
+		var url5day = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/"+ data.Key +"?apikey=CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG";
 		// pocetak 5 day requesta
  		trazi.open('GET', url5day, true);
 		trazi.onload = function(){
@@ -51,7 +51,7 @@ function prikaziPoziciju(pozicija) {
 			}
 			trazi.send();
 			// kraj 5 day requesta
-			var url12hour = "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+ data.Key +"?apikey=CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG";
+			var url12hour = "https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/"+ data.Key +"?apikey=CUIJALV2AY2W5LxbnZ4wjW6A9rHJbfjG";
 			// pocetak 12 sati requesta
 			trazi1.open('GET', url12hour, true);
 			trazi1.onload = function(){
