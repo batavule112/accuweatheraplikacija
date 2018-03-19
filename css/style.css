@@ -14,10 +14,11 @@ p, h1, h2, h3, h4, h5, h6 {
 .omotac {
 	position: relative;
 	padding: 0 15px;
-/*	background-image: url("https://media.giphy.com/media/SAemZChRCE7pm/giphy.gif");
+	background-image: url("https://media.giphy.com/media/SAemZChRCE7pm/giphy.gif");
+	-webkit-background-size: cover;
 	background-size: cover;
-	background-position: center center;
-	background-attachment: fixed;*/
+	background-position: bottom center;
+	/*background-attachment: fixed;*/
 	background-color: #092e6b;
 	max-width: 768px;
 }
