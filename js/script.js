@@ -10,7 +10,6 @@ function fToC(fahrenheit) {
     return ovo;
 }
 window.onload = function() {
-	// document.addEventListener("deviceready", nadjiLokaciju, false);
 	nadjiLokaciju();
 }
 function nadjiLokaciju() {
@@ -68,6 +67,120 @@ function prikaziPoziciju(pozicija) {
 					string1 += "</div>";
 					string1 += "</div>";
 					document.getElementById('sweeper').innerHTML = string1;
+				}
+				if (data1[0].WeatherIcon == 1 ||
+					data1[0].WeatherIcon == 2 ||
+					data1[0].WeatherIcon == 30 ||
+					data1[0].WeatherIcon == 33 ||
+					data1[0].WeatherIcon == 34 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('sunce')[0].style.display = "block";
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('mesec')[0].style.display = "block";
+						}
+				}
+				if (data1[0].WeatherIcon == 3 ||
+					data1[0].WeatherIcon == 4 ||
+					data1[0].WeatherIcon == 35 ||
+					data1[0].WeatherIcon == 36 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('sunce')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[0].style.display = "block";
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('mesec')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[0].style.display = "block";
+						}
+				}
+				if (data1[0].WeatherIcon == 5 ||
+					data1[0].WeatherIcon == 6 ||
+					data1[0].WeatherIcon == 20 ||
+					data1[0].WeatherIcon == 21 ||
+					data1[0].WeatherIcon == 23 ||
+					data1[0].WeatherIcon == 37 ||
+					data1[0].WeatherIcon == 38 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('sunce')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[1].style.display = "block";
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('mesec')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[1].style.display = "block";
+						}
+				}
+				if (data1[0].WeatherIcon == 7 ||
+					data1[0].WeatherIcon == 8 ||
+					data1[0].WeatherIcon == 19 ||
+					data1[0].WeatherIcon == 30 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						}
+				}
+				if (data1[0].WeatherIcon == 11 ) {
+					document.getElementsByClassName('omotac')[0].classList.add('magla');	
+				}
+				if (data1[0].WeatherIcon == 12 ||
+					data1[0].WeatherIcon == 15 ||
+					data1[0].WeatherIcon == 18 ||
+					data1[0].WeatherIcon == 26 ||
+					data1[0].WeatherIcon == 29 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('kisa')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('kap').length; i++) {
+							document.getElementsByClassName('kap')[i].style.display = "block";
+							}
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('kisa')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('kap').length; i++) {
+							document.getElementsByClassName('kap')[i].style.display = "block";
+							}
+						}
+				}
+				if (data1[0].WeatherIcon == 13 ||
+					data1[0].WeatherIcon == 14 ||
+					data1[0].WeatherIcon == 16 ||
+					data1[0].WeatherIcon == 17 ||
+					data1[0].WeatherIcon == 39 ||
+					data1[0].WeatherIcon == 40 ||
+					data1[0].WeatherIcon == 41 ||
+					data1[0].WeatherIcon == 42 ||
+					data1[0].WeatherIcon == 43 ||
+					data1[0].WeatherIcon == 44 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('sunce')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('kisa')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('kap').length; i++) {
+							document.getElementsByClassName('kap')[i].style.display = "block";
+							}
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('mesec')[0].style.display = "block";
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('kisa')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('kap').length; i++) {
+							document.getElementsByClassName('kap')[i].style.display = "block";
+							}
+						}
 				}
 				document.getElementsByClassName('gornji-glavni')[0].insertAdjacentHTML('afterbegin', '<h1>'+ fToC(data1[0].Temperature.Value) +'</h1><h3>'+ data1[0].IconPhrase +'</h3>');
 				document.getElementById('prvi-minmax').insertAdjacentHTML('afterend', '<div class="gornji-dno"><div class="dno"><p>Updated '+ minuti +' minutes ago</p><p>AccuWeather</p></div></div>');
