@@ -182,6 +182,31 @@ function prikaziPoziciju(pozicija) {
 							}
 						}
 				}
+				if (data1[0].WeatherIcon == 22 ||
+					data1[0].WeatherIcon == 23 ||
+					data1[0].WeatherIcon == 24 ||
+					data1[0].WeatherIcon == 25 ||
+					data1[0].WeatherIcon == 26 ) {
+						if (data1[0].IsDaylight == true) {
+						document.getElementsByClassName('omotac')[0].classList.add('dan');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('sneg')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('pahulja').length; i++) {
+							document.getElementsByClassName('pahulja')[i].style.display = "block";
+							}
+						
+						} else {
+						document.getElementsByClassName('omotac')[0].classList.add('noc');
+						document.getElementsByClassName('oblak')[2].style.display = "block";
+						document.getElementsByClassName('oblak')[3].style.display = "block";
+						document.getElementsByClassName('sneg')[0].style.display = "block";
+						for (var i = 0; i < document.getElementsByClassName('pahulja').length; i++) {
+							document.getElementsByClassName('pahulja')[i].style.display = "block";
+							}
+						
+						}
+				}
 				document.getElementsByClassName('gornji-glavni')[0].insertAdjacentHTML('afterbegin', '<h1>'+ fToC(data1[0].Temperature.Value) +'</h1><h3>'+ data1[0].IconPhrase +'</h3>');
 				document.getElementById('prvi-minmax').insertAdjacentHTML('afterend', '<div class="gornji-dno"><div class="dno"><p>Updated '+ minuti +' minutes ago</p><p>AccuWeather</p></div></div>');
 				var mySwiper = new Swiper ('.swiper-container', {

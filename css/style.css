@@ -14,12 +14,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .omotac {
 	position: relative;
 	padding: 0 15px;
-	/*background-image: url("https://media.giphy.com/media/SAemZChRCE7pm/giphy.gif");
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: bottom center;
-	background-attachment: fixed;*/
-	background-color: #092e6b;
 	max-width: 768px;
 	min-width: 320px;
 }
@@ -139,15 +133,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .dan {
-	background: linear-gradient(#a8f6ff, #fff);
+	background: linear-gradient( #a8f6ff, #fff );
 }
 
 .noc {
-	background: linear-gradient( black, #4c6da3);
+	background: linear-gradient( black, #4c6da3 );
 }
 
 .magla {
-	background: linear-gradient( #c5c6cc, #a6a7ad);
+	background: linear-gradient( #000, #c5c6cc, #a6a7ad, #000 );
 }
 
 .sunce {
@@ -220,6 +214,70 @@ p, h1, h2, h3, h4, h5, h6 {
 	height: 74%;
 }
 
+.sneg {
+	position: absolute;
+	height: 75px;
+	width: 90%;
+	top: 350px;
+	left: 5%;
+	display: none;
+}
+
+.pahulja {
+	background-color: #c5c6cc;
+	height: 9px;
+	width: 9px;
+	border-radius: 50%;
+	position: absolute;
+	filter: blur(2px);
+	display: none;
+}
+
+.pahulja:nth-child(2) {
+	top: 20px;
+	left: 25%;
+}
+
+.pahulja:nth-child(3) {
+	top: 10px;
+	left: 55%;
+}
+
+.pahulja:nth-child(4) {
+	top: 55px;
+	left: 86%;
+}
+
+.pahulja:nth-child(5) {
+	top: 0px;
+	left: 99%;
+}
+
+.pahulja:nth-child(6) {
+	top: 14px;
+	left: 91%;
+}
+
+.pahulja:nth-child(7) {
+	top: 28px;
+	left: 77%;
+}
+
+.pahulja:nth-child(8) {
+	top: 33px;
+	left: 42%;
+}
+
+.pahulja:nth-child(9) {
+	top: 27px;
+	left: 16%;
+}
+
+.pahulja:nth-child(10) {
+	top: 8px;
+	left: 22%;
+}
+
 @keyframes sija {
 	0%{filter: blur(5px);}
 	50%{filter: blur(25px);}
@@ -227,6 +285,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .oblak {
+	filter: blur(15px);
 	background: #fff;
 	background: -moz-linear-gradient(top,  #fff 5%, #f1f1f1 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,#f1f1f1));
